@@ -7,7 +7,15 @@
   <version>3.0-RELEASE</version>
   <name>01-maven-web-app</name>
   <url>http://maven.apache.org</url>
- 
+<properties>
+	
+		<sonar.host.url>http://13.201.71.128/9000/</sonar.host.url>
+                <sonar.login>admin</sonar.login>
+		<sonar.password>sonar</sonar.password>  
+            
+	</properties> 
+
+  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -15,6 +23,22 @@
       <version>3.8.1</version>
     </dependency>
   </dependencies>
+
+  <distributionManagement>
+	
+	    <repository>
+	      <id>nexus</id>
+	      <name>Aish Technologies Releases Nexus Repository</name>
+	      <url>http://3.108.64.44:8081/repository/relaese-repo-maven</url>
+	      </repository>
+		
+	    <snapshotRepository>
+	      <id>nexus</id>
+	      <name>Aish Technologies Snapshot Nexus Repository </name>
+	      <url>http://3.108.64.44:8081/repository/snapshot-repo-maven</url>
+	    </snapshotRepository>
+	    
+	</distributionManagement>  
   <build>
     <finalName>01-maven-web-app</finalName>
     <plugins>
