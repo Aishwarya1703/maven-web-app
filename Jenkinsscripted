@@ -1,0 +1,23 @@
+node{
+
+    def mavenHome = tool name: 'maven'
+
+    stage('clone from git')
+    {
+     git branch: 'main', url: 'https://github.com/Aishwarya1703/maven-web-app.git'
+    }
+
+    stage('Compile and Build')
+    {
+     sh '${mavenHome}/bin/mvn clean package'
+    }
+    
+    stage('Test'){
+    sh "${mavenHome}/bin/mvn clean sonar:sonar"
+    }
+    
+    stage ('upload the artifact'){
+    ssh "${mavenHome}/bin/mvn clean deploy"
+    
+}
+}
