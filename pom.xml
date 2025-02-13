@@ -11,7 +11,7 @@
 	
 <properties>
 	
-		<sonar.host.url>http://3.110.134.240:9000/</sonar.host.url>
+		<sonar.host.url>http://13.200.255.86:9000/</sonar.host.url>
                 <sonar.login>admin</sonar.login>
 		<sonar.password>Sonar@123456</sonar.password>  
             
@@ -38,13 +38,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Aish Technologies Releases Nexus Repository</name>
-	      <url>http://3.110.167.205:8081/repository/maven-release-repo</url>
+	      <url>http://43.204.229.247:8081/repository/web-app-release-repo/</url>
 	      </repository>
 		
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Aish Technologies Snapshot Nexus Repository </name>
-	      <url>http://3.110.167.205:8081/repository/maven-web-repo</url>
+	      <url>http://43.204.229.247:8081/repository/web-app-snapshot-repo/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>  
